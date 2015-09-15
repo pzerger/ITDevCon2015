@@ -358,7 +358,7 @@
                     "properties": {
                         "publisher": "Microsoft.Powershell",
                         "type": "DSC",
-                        "typeHandlerVersion": "1.7",
+                        "typeHandlerVersion": "1.9",
                         "settings": {
                             "ModulesUrl": "[variables('adModulesURL')]",
                             "ConfigurationFunction": "[variables('adConfigurationFunction')]",
@@ -467,7 +467,7 @@
             "properties": {
                 "publisher": "Microsoft.Powershell",
                 "type": "DSC",
-                "typeHandlerVersion": "1.7",
+                "typeHandlerVersion": "1.9",
                 "settings": {
                     "ModulesUrl": "[concat(parameters('assetLocation'),'/Configuration.zip')]",
                     "ConfigurationFunction": "Configuration.ps1\\DomainJoin",

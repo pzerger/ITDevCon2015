@@ -1,0 +1,95 @@
+﻿19:40:11 - Build started.
+19:40:11 - Project "3 Tier App Template.deployproj" (StageArtifacts target(s)):
+19:40:11 - Project "3 Tier App Template.deployproj" (ContentFilesProjectOutputGroup target(s)):
+19:40:11 - Done building project "3 Tier App Template.deployproj".
+19:40:11 - Done building project "3 Tier App Template.deployproj".
+19:40:11 - Build succeeded.
+19:40:11 - The following parameter values will be used for this deployment:
+19:40:11 -     location: West US
+19:40:11 -     addressPrefix: 10.0.0.0/16
+19:40:11 -     DCsubnetPrefix: 10.0.1.0/24
+19:40:11 -     SCsubnetPrefix: 10.0.2.0/24
+19:40:11 -     SQLsubnetPrefix: 10.0.3.0/24
+19:40:11 -     contososysctrappName: contososysctrapp
+19:40:11 -     contososysctrappType: Standard_LRS
+19:40:11 -     contososysctrappLocation: West US
+19:40:11 -     ADDCName: ADDC
+19:40:11 -     ADDCAdminUserName: adadmin
+19:40:11 -     ADDCAdminPassword: <securestring>
+19:40:11 -     ADDCWindowsOSVersion: 2012-R2-Datacenter
+19:40:11 -     SYSCTR1Name: SYSCTR1
+19:40:11 -     SYSCTR1AdminUserName: scadmin
+19:40:11 -     SYSCTR1AdminPassword: <securestring>
+19:40:11 -     SYSCTR1WindowsOSVersion: 2012-R2-Datacenter
+19:40:11 -     SQL1Name: SQL1
+19:40:11 -     SQL1AdminUserName: sqladmin
+19:40:11 -     SQL1AdminPassword: <securestring>
+19:40:11 -     SQL1WindowsOSVersion: 2012-R2-Datacenter
+19:40:11 -     ciresonadpubipDnsName: ciresonpocad1
+19:40:11 -     ciresonsmpubipDnsName: ciresonpocsm1
+19:40:11 -     ciresonsqlpubipDnsName: ciresonpocsql1
+19:40:11 - Launching deployment PowerShell script with the following command:
+19:40:11 - 'e:\authoring\cireson azure nda\4-with ad\3 tier app template\Scripts\Deploy-AzureResourceGroup.ps1' -StorageAccountName '' -ResourceGroupName '3TierAppTemplate' -ResourceGroupLocation 'westus' -TemplateFile 'e:\authoring\cireson azure nda\4-with ad\3 tier app template\templates\vnet-3subnets-azuredeploy.json' -TemplateParametersFile 'e:\authoring\cireson azure nda\4-with ad\3 tier app template\templates\deploymenttemplate.param.dev.json'
+19:40:12 - 
+19:40:13 - 
+19:40:13 - Accounts            : {[akosts@hotmail.com, Microsoft.Azure.Common.Authentication.Models.AzureAccount]}
+19:40:13 - Subscriptions       : {[0b62f50c-c15a-40e2-b1ab-7ac2596a1d74, Microsoft.Azure.Common.Authentication.Models.AzureSubscription]}
+19:40:13 - DefaultSubscription : Microsoft.Azure.Common.Authentication.Models.AzureSubscription
+19:40:13 - Environments        : {[AzureCloud, Microsoft.Azure.Common.Authentication.Models.AzureEnvironment], [AzureChinaCloud, Microsoft.Azure.Common.Authentication.Models.AzureEnvironment]}
+19:40:13 - Context             : Microsoft.Azure.Common.Authentication.Models.AzureContext
+19:40:13 - ProfileLoadErrors   : 
+19:40:13 - ProfilePath         : 
+19:40:13 - 
+19:40:13 - cmdlet New-AzureResourceGroup at command pipeline position 1
+Supply values for the following parameters:
+19:40:13 - locationFromTemplate: 19:40:17 - West US
+19:40:52 - [VERBOSE] 7:40:52 PM - Created resource group '3TierAppTemplate' in location 'westus'
+19:40:52 - [VERBOSE] 7:40:52 PM - Template is valid.
+19:40:53 - [VERBOSE] 7:40:53 PM - Create template deployment 'vnet-3subnets-azuredeploy'.
+19:40:56 - [VERBOSE] 7:40:56 PM - Resource Microsoft.Network/virtualNetworks 'ContosoNET' provisioning status is succeeded
+19:40:56 - [VERBOSE] 7:40:56 PM - Resource Microsoft.Network/publicIPAddresses 'ciresonadpubip' provisioning status is succeeded
+19:40:56 - [VERBOSE] 7:40:56 PM - Resource Microsoft.Network/publicIPAddresses 'ciresonsqlpubip' provisioning status is succeeded
+19:40:56 - [VERBOSE] 7:40:56 PM - Resource Microsoft.Storage/storageAccounts 'contososysctrapp' provisioning status is succeeded
+19:40:58 - [VERBOSE] 7:40:58 PM - Resource Microsoft.Network/publicIPAddresses 'ciresonsmpubip' provisioning status is succeeded
+19:41:01 - [VERBOSE] 7:41:01 PM - Resource Microsoft.Compute/virtualMachines 'SQL1' provisioning status is running
+19:41:01 - [VERBOSE] 7:41:01 PM - Resource Microsoft.Compute/virtualMachines 'SYSCTR1' provisioning status is running
+19:41:01 - [VERBOSE] 7:41:01 PM - Resource Microsoft.Network/networkInterfaces 'SYSCTR1NetworkInterface' provisioning status is succeeded
+19:41:01 - [VERBOSE] 7:41:01 PM - Resource Microsoft.Network/networkInterfaces 'SQL1NetworkInterface' provisioning status is succeeded
+19:41:01 - [VERBOSE] 7:41:01 PM - Resource Microsoft.Network/networkInterfaces 'ADDCNetworkInterface' provisioning status is succeeded
+19:41:03 - [VERBOSE] 7:41:03 PM - Resource Microsoft.Compute/virtualMachines 'ADDC' provisioning status is running
+19:41:18 - [VERBOSE] 7:41:18 PM - Resource Microsoft.Compute/virtualMachines 'SQL1' provisioning status is succeeded
+19:41:18 - [VERBOSE] 7:41:18 PM - Resource Microsoft.Compute/virtualMachines 'SYSCTR1' provisioning status is succeeded
+19:41:38 - [VERBOSE] 7:41:38 PM - Resource Microsoft.Compute/virtualMachines 'ADDC' provisioning status is succeeded
+19:42:00 - ResourceGroupName : 3TierAppTemplate
+19:42:00 - Location          : westus
+19:42:00 - Resources         : {ADDC, SQL1, SYSCTR1, ADDCNetworkInterface...}
+19:42:00 - ResourcesTable    : 
+19:42:00 -                     Name                     Type                                 Location
+19:42:00 -                     =======================  ===================================  ========
+19:42:00 -                     ADDC                     Microsoft.Compute/virtualMachines    westus  
+19:42:00 -                     SQL1                     Microsoft.Compute/virtualMachines    westus  
+19:42:00 -                     SYSCTR1                  Microsoft.Compute/virtualMachines    westus  
+19:42:00 -                     ADDCNetworkInterface     Microsoft.Network/networkInterfaces  westus  
+19:42:00 -                     SQL1NetworkInterface     Microsoft.Network/networkInterfaces  westus  
+19:42:00 -                     SYSCTR1NetworkInterface  Microsoft.Network/networkInterfaces  westus  
+19:42:00 -                     ciresonadpubip           Microsoft.Network/publicIPAddresses  westus  
+19:42:00 -                     ciresonsmpubip           Microsoft.Network/publicIPAddresses  westus  
+19:42:00 -                     ciresonsqlpubip          Microsoft.Network/publicIPAddresses  westus  
+19:42:00 -                     ContosoNET               Microsoft.Network/virtualNetworks    westus  
+19:42:00 -                     contososysctrapp         Microsoft.Storage/storageAccounts    westus  
+19:42:00 -                     
+19:42:00 - ProvisioningState : Succeeded
+19:42:00 - Permissions       : {Microsoft.Azure.Commands.Resources.Models.Authorization.PSPermission}
+19:42:00 - PermissionsTable  : 
+19:42:00 -                     Actions  NotActions
+19:42:00 -                     =======  ==========
+19:42:00 -                     *                  
+19:42:00 -                     
+19:42:00 - Tags              : {}
+19:42:00 - TagsTable         : 
+19:42:00 - ResourceId        : /subscriptions/0b62f50c-c15a-40e2-b1ab-7ac2596a1d74/resourceGroups/3TierAppTemplate
+19:42:00 - 
+19:42:00 - 
+19:42:00 - 
+19:42:00 - 
+19:42:00 - Successfully deployed template 'e:\authoring\cireson azure nda\4-with ad\3 tier app template\templates\vnet-3subnets-azuredeploy.json' to resource group '3TierAppTemplate'.

@@ -155,7 +155,7 @@
             "metadata": {
                 "description": "The location of resources such as templates and DSC modules that the script is dependent"
             },
-            "defaultValue": "https://raw.githubusercontent.com/pzerger/CommunitySamples/master/ARM"
+            "defaultValue": "https://raw.githubusercontent.com/pzerger/ITDevCon2015/master/4%20-%20Active%20Directory/"
         },
         "UpdateVNetDNSTemplateFile": {
             "type": "string",
@@ -467,7 +467,7 @@
             "properties": {
                 "publisher": "Microsoft.Powershell",
                 "type": "DSC",
-                "typeHandlerVersion": "1.9",
+                "typeHandlerVersion": "1.7",
                 "settings": {
                     "ModulesUrl": "[concat(parameters('assetLocation'),'/Configuration.zip')]",
                     "ConfigurationFunction": "Configuration.ps1\\DomainJoin",
